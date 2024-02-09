@@ -114,7 +114,7 @@ if __name__ == "__main__":
     google_api_key = open(parent_folder + "api_key.txt", "r").read()
     cities = pd.read_csv(parent_folder + "Data//CityList.csv")
     gmaps = googlemaps.Client(key=google_api_key)
-    return_count = 200
+    return_count = 3
 
     guessed_coordinates = []
     #Iterating through cities
