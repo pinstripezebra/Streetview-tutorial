@@ -69,8 +69,8 @@ def query_random_location(gmaps, location, parent_folder, lat_long,name = "", mi
     #Generates random value in range [-0.005, 0.005]
     random_lat = (random.random()-0.5) * random_multiplier
     random_long = (random.random()-0.5) * random_multiplier
-
     original_lat, original_long = list(location)[0], list(location)[1]
+
     #Calculating new latitude and longitude values
     new_lat, new_long = round(original_lat + random_lat,6), round(original_long + random_long,6)
 
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     google_api_key = open(parent_folder + "api_key.txt", "r").read()
     cities = pd.read_csv(parent_folder + "Data//CityList.csv")
     gmaps = googlemaps.Client(key=google_api_key)
-    return_count = 3
+    return_count = 200
 
     guessed_coordinates = []
     #Iterating through cities
